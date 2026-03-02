@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KES 100 Verification | Kennedy Digital Hub</title>
+    <script src="https://unpkg.com/intasend-inlinejs-sdk@latest/build/intasend-inline.js"></script>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f7f6; margin: 0; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #10ac84; }
+        .btn-pay { background: #10ac84; color: white; border: none; padding: 15px 25px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Verify Payment Link</h2>
+        <p>This will trigger an M-Pesa prompt for <strong>KES 100.00</strong></p>
+        
+        <button class="intaSendPayButton btn-pay" data-amount="100" data-currency="KES">
+            Pay KES 100.00
+        </button>
+    </div>
+
+    <script>
+        // 3. Initialize the gateway with your Live Key
+        new window.IntaSend({
+            publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
+            live: true
+        })
+        .on("COMPLETE", (results) => {
+            console.log("Success:", results);
+            // Redirect to your success page
+            window.location.href = "https://spm254ke.github.io/digital-hub-/success.html";
+        })
+        .on("FAILED", (results) => {
+            console.log("Failed:", results);
+            alert("Payment failed or cancelled.");
+        });
+    </script>
+</body>
+</html>
