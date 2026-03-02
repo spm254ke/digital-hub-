@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kennedy Digital Hub</title>
+  <title>Test IntaSend Popup</title>
+  <script src="https://checkout.intasend.com/intasend-inline.js"></script>
 </head>
 <body>
-  <h1>Welcome to Kennedy’s Digital Hub</h1>
-  <p>Fresh guides, alerts, and resources — monetized with IntaSend.</p>
-
-  <!-- IntaSend Payment Button -->
-  <script src="https://checkout.intasend.com/intasend-inline.js"></script>
-  <button id="payButton">Unlock Premium Content</button>
+  <h1>Test Payment</h1>
+  <button id="payButton">Pay with IntaSend</button>
 
   <script>
     const checkout = new window.IntaSendCheckout({
-      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea", // your actual public key
+      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea", // replace with your actual public key
       currency: "KES",
       amount: 100,
       redirectURL: "https://spm254ke.github.io/digital-hub-/success.html"
