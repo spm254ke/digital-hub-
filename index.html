@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kennedy Digital Hub</title>
+</head>
+<body>
+  <h1>Welcome to Kennedy’s Digital Hub</h1>
+  <p>This site is powered by GitHub Pages and monetized with IntaSend.</p>
+
+  <!-- IntaSend Payment Button -->
+  <script src="https://checkout.intasend.com/intasend-inline.js"></script>
+  <button id="payButton">Pay with IntaSend</button>
+
+  <script>
+    const checkout = new window.IntaSendCheckout({
+      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
+      currency: "KES",
+      amount: 100, // Example: charge 100 KES
+      redirectURL: "https://kennedy.github.io/kennedy-digital-hub/success.html"
+    });
+
+    document.getElementById("payButton").addEventListener("click", () => {
+      checkout.open();
+    });
+  </script>
+</body>
+</html>
