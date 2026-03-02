@@ -1,27 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kennedy Digital Hub</title>
-  <!-- Load IntaSend Inline SDK -->
-  <script src="https://unpkg.com/intasend-inlinejs-sdk@latest/build/intasend-inline.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennedy Digital Hub | Global Response & Tech Fixes (March 2026)</title>
+    <style>
+        :root { --primary: #0070f3; --bg: #f8f9fa; --text: #1a1a1a; }
+        body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background: #fff; padding: 40px 20px; text-align: center; border-bottom: 1px solid #eaeaea; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 25px; border-radius: 12px; border: 1px solid #eaeaea; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: var(--primary); }
+        .card h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.25rem; }
+        .card p { margin: 0 0 20px 0; font-size: 0.95rem; color: #666; flex-grow: 1; }
+        .price-badge { font-weight: bold; color: #27ae60; border: 1px solid #27ae60; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; width: fit-content; }
+        .urgent-banner { background: #ff4757; color: white; padding: 10px; text-align: center; font-weight: bold; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-  <h1>Welcome to Kennedy’s Digital Hub</h1>
-  <p>Global guides, alerts, and resources — monetized with IntaSend.</p>
+    <div class="urgent-banner">LIVE UPDATES: March 2, 2026 - Critical Infrastructure & Ad-Tech Response Guides</div>
+    <header>
+        <h1>Kennedy Digital Hub</h1>
+        <p>Immediate technical solutions for today's global market shifts.</p>
+    </header>
 
-  <!-- IntaSend Payment Button -->
-  <button class="intaSendPayButton" data-amount="10" data-currency="USD">
-    Pay with IntaSend
-  </button>
+    <div class="container">
+        <div class="grid">
+            <a href="anthropic-ban-fix.html" class="card">
+                <h3>OpenAI-Criteo Ad Integration</h3>
+                <p>The first technical guide to whitelisting your brand for the ChatGPT Search Ad pilot launched today.</p>
+                <span class="price-badge">$15.00 USD</span>
+            </a>
 
-  <script>
-    new window.IntaSend({
-      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
-      live: true
-    }).on("COMPLETE", function(response){
-      console.log("Payment complete:", response);
-      window.location.href = "https://spm254ke.github.io/digital-hub-/success.html";
-    });
-  </script>
+            <a href="logistics-reroute.html" class="card">
+                <h3>Middle East Logistics Bypass</h3>
+                <p>Urgent rerouting scripts for e-commerce following the Strait of Hormuz closure/supply disruptions.</p>
+                <span class="price-badge">$45.00 USD</span>
+            </a>
+
+            <a href="ai-agent-fix.html" class="card">
+                <h3>Agentic AI Loop Recovery</h3>
+                <p>Patching the "Infinite Interaction" bug in autonomous agents following the March 2nd API update.</p>
+                <span class="price-badge">$20.00 USD</span>
+            </a>
+
+            <a href="quantum-secure.html" class="card">
+                <h3>Post-Quantum Web Shield</h3>
+                <p>Implement lattice-based encryption to secure your data against 2026 quantum decryption threats.</p>
+                <span class="price-badge">$30.00 USD</span>
+            </a>
+
+            <a href="ai-search-ranking.html" class="card">
+                <h3>AI-Search Citation Hack</h3>
+                <p>How to format your 2026 content to be cited as a primary source by Perplexity and Gemini.</p>
+                <span class="price-badge">$15.00 USD</span>
+            </a>
+
+            <a href="moltbot-privacy.html" class="card">
+                <h3>Moltbot Data Recovery</h3>
+                <p>Permanently scrub or retrieve your leaked private data from the Moltbot LLM interaction logs.</p>
+                <span class="price-badge">$12.00 USD</span>
+            </a>
+
+            <a href="vision-pro-gen3.html" class="card">
+                <h3>Vision Pro Gen-3 Dev Mode</h3>
+                <p>Unlocking the hidden 3D-AI creative suite on Apple's March 2026 headset release.</p>
+                <span class="price-badge">$15.00 USD</span>
+            </a>
+
+            <a href="geopatriation-guide.html" class="card">
+                <h3>Sovereign AI Cloud Setup</h3>
+                <p>A roadmap for migrating your data from public clouds to private "Geopatriated" AI servers.</p>
+                <span class="price-badge">$99.00 USD</span>
+            </a>
+
+            </div>
+    </div>
 </body>
 </html>
