@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nairobi Transport Alert</title>
+</head>
+<body>
+  <h1>Transport Alert – Nairobi</h1>
+  <p>Heavy traffic reported on Thika Road due to ongoing construction. 
+     Expect delays of up to 45 minutes during peak hours.</p>
+
+  <!-- IntaSend Payment Button -->
+  <script src="https://checkout.intasend.com/intasend-inline.js"></script>
+  <button id="payButton">Unlock Premium Alerts</button>
+
+  <script>
+    const checkout = new window.IntaSendCheckout({
+      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
+      currency: "KES",
+      amount: 50,
+      redirectURL: "https://spm254ke.github.io/digital-hub-/success.html"
+    });
+
+    document.getElementById("payButton").addEventListener("click", () => {
+      checkout.open();
+    });
+  </script>
+</body>
+</html>
 
