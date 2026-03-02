@@ -7,16 +7,16 @@
 </head>
 <body>
   <h1>Welcome to Kennedy’s Digital Hub</h1>
-  <p>Fresh guides, alerts, and resources — monetized with IntaSend.</p>
+  <p>Global guides, alerts, and resources — monetized with IntaSend.</p>
 
   <!-- IntaSend Payment Button -->
-  <button class="intaSendPayButton" data-amount="100" data-currency="KES">
+  <button class="intaSendPayButton" data-amount="10" data-currency="USD">
     Pay with IntaSend
   </button>
 
   <script>
     new window.IntaSend({
-      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea", // replace with your actual Public Key
+      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
       live: true
     }).on("COMPLETE", function(response){
       console.log("Payment complete:", response);
