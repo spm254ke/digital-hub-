@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateway Verification | Kennedy Digital Hub</title>
+    <script src="https://unpkg.com/intasend-inlinejs-sdk@latest/build/intasend-inline.js"></script>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f2f5; margin: 0; }
+        .test-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; max-width: 400px; }
+        .status-ready { color: #27ae60; font-weight: bold; margin-bottom: 20px; }
+        .btn-test { background: #0070f3; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 1rem; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <h2>Connection Test</h2>
+        <p class="status-ready">● System Ready</p>
+        <p>Click below to verify that the IntaSend gateway is correctly linked to your live account.</p>
+        
+        <button class="intaSendPayButton btn-test" data-amount="1.00" data-currency="USD" data-email="test@example.com">
+            Run Gateway Test ($1.00)
+        </button>
+
+        <p style="font-size: 0.8rem; color: #666; margin-top: 20px;">
+            If the popup shows your business name, the link is successful.
+        </p>
+    </div>
+
+    <script>
+        new window.IntaSend({
+            publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
+            live: true // Ensure this is true for live verification
+        }).on("COMPLETE", (results) => {
+            console.log("Test Success:", results);
+            window.location.href = "https://spm254ke.github.io/digital-hub-/success.html";
+        }).on("FAILED", (results) => {
+            alert("Gateway Connection Failed. Check API Key.");
+        });
+    </script>
+</body>
+</html>
