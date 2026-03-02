@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+</head>
+<body>
+  <h1>Checkout Page</h1>
+  <p>Click below to complete your payment securely with IntaSend.</p>
+
+  <!-- IntaSend Payment Button -->
+  <script src="https://checkout.intasend.com/intasend-inline.js"></script>
+  <button id="payButton">Pay Now</button>
+
+  <script>
+    const checkout = new window.IntaSendCheckout({
+      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
+      currency: "KES",
+      amount: 200,
+      redirectURL: "https://spm254ke.github.io/digital-hub-/payments/receipt.html"
+    });
+
+    document.getElementById("payButton").addEventListener("click", () => {
+      checkout.open();
+    });
+  </script>
+</body>
+</html>
 
