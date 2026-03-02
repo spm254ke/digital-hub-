@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Global Oil Price Shock Alert</title>
+  <script src="https://unpkg.com/intasend-inlinejs-sdk@latest/build/intasend-inline.js"></script>
+</head>
+<body>
+  <h1>Global Oil Price Shock Alert</h1>
+  <p>Recent escalations in the Middle East have triggered volatility in global oil markets. 
+     Prices are spiking, impacting transportation, manufacturing, and household costs worldwide.</p>
+
+  <p>Stay ahead with premium alerts that track real‑time changes and their impact on global trade.</p>
+
+  <!-- IntaSend Payment Button -->
+  <button class="intaSendPayButton" data-amount="3" data-currency="USD">
+    Unlock Premium Alert
+  </button>
+
+  <script>
+    new window.IntaSend({
+      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea", // replace with your actual Public Key
+      live: true
+    }).on("COMPLETE", function(response){
+      console.log("Payment complete:", response);
+      window.location.href = "https://spm254ke.github.io/digital-hub-/success.html";
+    });
+  </script>
+</body>
+</html>
