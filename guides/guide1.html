@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Global Climate Change Guide</title>
+  <script src="https://unpkg.com/intasend-inlinejs-sdk@latest/build/intasend-inline.js"></script>
+</head>
+<body>
+  <h1>Global Climate Change</h1>
+  <p>Climate change is reshaping economies, migration, and geopolitics worldwide. 
+     This guide explores the science, the politics, and the global impact.</p>
+
+  <!-- IntaSend Payment Button -->
+  <button class="intaSendPayButton" data-amount="5" data-currency="USD">
+    Unlock Full Guide
+  </button>
+
+  <script>
+    new window.IntaSend({
+      publicAPIKey: "ISPubKey_live_dc5967eb-6e6a-497c-a10f-35a76358efea",
+      live: true
+    }).on("COMPLETE", function(response){
+      console.log("Payment complete:", response);
+      window.location.href = "https://spm254ke.github.io/digital-hub-/success.html";
+    });
+  </script>
+</body>
+</html>
 
